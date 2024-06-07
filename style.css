@@ -96,30 +96,44 @@
         }
 
         #cart {
-            background-color: #fff;
-            border: 0 solid #e2e8f0;
-            border-radius: 1.5rem;
-            box-sizing: border-box;
-            color: #0d172a;
-            cursor: pointer;
-            display: inline-block;
-            font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            font-size: 1.1rem;
-            font-weight: 600;
-            line-height: 1;
-            padding: 1rem 1.6rem;
-            text-align: center;
-            text-decoration: none #0d172a solid;
-            text-decoration-thickness: auto;
-            transition: all .5s cubic-bezier(.4, 0, .2, 1);
-            box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-        }
-        #cart:hover {
-            background-color: rgb(19, 93, 102);
-        }
+            padding: 15px 25px;
+            border: unset;
+            border-radius: 15px;
+            color: #212121;
+            z-index: 1;
+            background: #e8e8e8;
+            position: relative;
+            font-weight: 1000;
+            font-size: 17px;
+            -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+            box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+            transition: all 250ms;
+            overflow: hidden;
+           }
+           
+           #cart::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            border-radius: 15px;
+            background-color: #212121;
+            z-index: -1;
+            -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+            box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+            transition: all 250ms
+           }
+           
+           #cart:hover {
+            color: #e8e8e8;
+           }
+           
+           #cart:hover::before {
+            width: 100%;
+           }
+
 
         table {
             width: 70%;
