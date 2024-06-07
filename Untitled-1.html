@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Items</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header, nav, section, footer {
+            width: 80%;
+            margin: auto;
+            padding: 10px;
+        }
+        nav {
+            background-color: #f8f8f8;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            margin: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th img {
+            max-width: 100%;
+            height: auto;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .menu-section {
+            margin-top: 20px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome To Online Shopping Center</h1>
+</header>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="grocery.html">GROCERY</a>
+    <a href="fruit.html">FRUITS</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
+</nav>
+
+<section>
+    <h1>Our Fast Food Menu</h1>
+    <nav>
+        <a href="#everyday-value">Everyday Value</a>
+        <a href="#burgers">Burgers</a>
+        <a href="#duo-deals">Duo Boxes & Deals</a>
+        <a href="#snacks">Snacks</a>
+        <a href="#midnight-deals">Midnight Deals</a>
+        <a href="#beverages">Beverages</a>
+    </nav>
+</section>
+
+<section id="everyday-value" class="menu-section">
+    <h2>Everyday Value</h2>
+    <table>
+        <tr>
+            <th><img src="Krunch Combo.png" alt="Krunch Combo">Krunch Combo<br>Rs 550<button>Add To Cart</button></th>
+            <th><img src="Krunch Burger.png" alt="Krunch Burger">Krunch Burger<br>Rs 280<button>Add To Cart</button></th>
+            <th><img src="Krunch Chicken Combo.png" alt="Krunch Chicken Combo">Krunch Chicken Combo<br>Rs 570<button>Add To Cart</button></th>
+        </tr>
+        <!-- Additional rows as needed -->
+    </table>
+</section>
+
+<section id="burgers" class="menu-section">
+    <h2>Burgers</h2>
+    <table>
+        <tr>
+            <th><img src="zinger burger.png" alt="Zinger Burger">Zinger Burger<br>Rs 450<button>Add To Cart</button></th>
+            <th><img src="Mighty Zinger.png" alt="Mighty Zinger">Mighty Zinger<br>Rs 700<button>Add To Cart</button></th>
+            <th><img src="Zinger Stacker.png" alt="Zinger Stacker">Zinger Stacker<br>Rs 800<button>Add To Cart</button></th>
+        </tr>
+        <!-- Additional rows as needed -->
+    </table>
+</section>
+
+<!-- Additional sections for other categories -->
+
+<button class="back-to-top" onclick="window.scrollTo(0, 0);">Back to Top</button>
+
+<script>
+    // Show the back-to-top button when the user scrolls down
+    window.onscroll = function() {
+        var button = document.querySelector('.back-to-top');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+</script>
+
+</body>
+</html>
